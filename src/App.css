@@ -1,0 +1,149 @@
+/* 整體容器 */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 標題樣式 */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Tab 導航容器 */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab 按鈕基礎樣式 */
+nav button {
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  min-width: 120px;
+}
+
+/* Tab 按鈕 hover 效果 */
+nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  color: #007bff;
+  border-color: #007bff;
+}
+
+/* 選中的 Tab 按鈕 */
+nav button.active {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-color: #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 選中按鈕的 hover 效果 */
+nav button.active:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  transform: translateY(-1px);
+}
+
+/* 主要內容區域 */
+main {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  min-height: 500px;
+  transition: all 0.3s ease;
+}
+
+/* 內容區域動畫效果 */
+main > * {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  nav button {
+    padding: 10px 16px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+
+  main {
+    padding: 20px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav button {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
+/* 特殊主題色彩變化（可選） */
+.theme-purple nav button.active {
+  background: linear-gradient(135deg, #6f42c1, #5a32a1);
+  border-color: #6f42c1;
+}
+
+.theme-green nav button.active {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  border-color: #28a745;
+}
+
+.theme-orange nav button.active {
+  background: linear-gradient(135deg, #fd7e14, #e55a00);
+  border-color: #fd7e14;
+}
