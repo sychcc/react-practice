@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./reactForm.css";
+import "./ReactForm.css";
 
 const FormPractice = () => {
   // All form data state
